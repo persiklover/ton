@@ -1,0 +1,22 @@
+@import "/styles/mixins";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  padding: .55rem 1.5rem;
+  border: none;
+  border-radius: 4.5rem;
+
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: white;
+
+  text-decoration: none;
+
+  @include xs {
+    font-size: 1.4rem;
+  }
+}

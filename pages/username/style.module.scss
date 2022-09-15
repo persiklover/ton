@@ -1,0 +1,172 @@
+@import "/styles/mixins";
+
+.wrapper {
+  background: #F6F8FA;
+  margin: 0 auto;
+  margin-top: 12rem;
+  margin-bottom: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  width: 100%;
+  padding: 6rem 4rem;
+  border-radius: 7rem;
+
+  text-align: center;
+
+  :global(.dark-theme) & {
+    background: #232B3E;
+  }
+
+  @include xs {
+    padding: 3rem;
+    border-radius: 4.5rem;
+  }
+}
+
+.suptitle {
+  display: block;
+  
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 110%;
+  color: #778995;
+
+  @include xs {
+    font-size: 2.2rem;
+  }
+}
+
+.username {
+  position: relative;
+
+  display: block;
+  max-width: 100%;
+  margin-bottom: 3.2rem;
+
+  font-size: 5.6rem;
+  color: #0088CC;
+  font-weight: 800;
+  line-height: 110%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left:   0;
+    top: 100%;
+    margin-top: -.4rem;
+    display: block;
+    width:   100%;
+    height: .35rem;
+    background: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      display: none;
+    }
+  }
+
+  @include xs {
+    font-size: 3.6rem;
+  }
+
+  span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.inputs {
+  max-width: 31.4rem;
+  width: 100%;
+
+  > * + * {
+    margin-top: 1.2rem;
+  }
+
+  @include xs {
+    max-width: 27.5rem;
+  }
+}
+
+.input {
+  background: var(--bg-color);
+  width: 100%;
+  height: 6rem;
+  padding: 1.4rem 2.4rem;
+  border: .1rem solid #EAF1F8;
+  border-radius: 2rem;
+
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 160%;
+
+  &::placeholder {
+    color: #778995;
+  }
+
+  :global(.dark-theme) & {
+    border-color: transparent;
+  }
+
+  @include xs {
+    font-size: 1.6rem;
+  }
+  
+  &Wrapper {
+    position: relative;
+    display: flex;
+  }
+}
+
+.amount {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  font-weight: 800;
+  line-height: 3rem;
+  text-align: center;
+
+  @include xs {
+    font-size: 2rem;
+  }
+}
+
+.convertedCurrency {
+  position: absolute;
+  left: 2.4rem;
+  top:     50%;
+  transform: translateY(-50%);
+
+  font-size: 1.6rem;
+  color: #778995;
+  font-weight: 500;
+}
+
+.tonIcon {
+  position: absolute;
+  right: 1rem;
+  top:    50%;
+  transform: translateY(-50%);
+}
+
+.button {
+  display: flex;
+  background: var(--primary-color);
+  width: 100%;
+  margin-top: 2.4rem;
+  padding: 1.8rem 2.4rem;
+  border: none;
+  border-radius: 2rem;
+
+  font-size: 2rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 2.5rem;
+}

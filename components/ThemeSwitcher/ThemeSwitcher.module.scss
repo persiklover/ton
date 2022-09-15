@@ -1,0 +1,41 @@
+.wrapper {
+  flex-shrink: 0;
+  position: relative;
+  display: inline-flex;
+  width:  5.3rem;
+  height: 3rem;
+
+  input {
+    &:checked + .switch:before {
+      background-image: url('/sun.svg');
+      transform: translate(-2.2rem, -50%);
+    }
+  }
+
+}
+
+.switch {
+  position: absolute;
+  top:    0;
+  left:   0;
+  right:  0;
+  bottom: 0;
+
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border-radius: 6rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: .3rem;
+    top: 50%;
+
+    background: url('/moon.svg') no-repeat center / contain;
+    border-radius: 50%;
+    height: 2.5rem;
+    width:  2.5rem;
+    transform: translateY(-50%);
+    transition: .3s;
+  }
+}

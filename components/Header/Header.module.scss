@@ -1,0 +1,76 @@
+@import "/styles/mixins";
+
+.header {
+  padding: 4rem 0 2rem;
+
+  @include xs {
+    padding: 2rem 0;
+  }
+  
+  &Inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      background-color: var(--secondary-color);
+      height: 3.5rem;
+      padding: .55rem 1.4rem;
+      border-radius: 4.5rem;
+  
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: inherit;
+
+      @include xs {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.switchesContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  @include xs {
+    gap: 1rem;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    background-color: var(--secondary-color);
+    padding: .55rem 1rem;
+    border: unset;
+    border-radius: 4.5rem;
+
+    font-size: 1.6rem;
+    color: inherit;
+    font-weight: 500;
+
+    @include xs {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  @include xs {
+    gap: 1rem;
+  }
+}

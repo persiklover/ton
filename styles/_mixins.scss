@@ -1,0 +1,18 @@
+// tablet
+@mixin sm() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// mobile
+@mixin xs() {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin no-select() {
+  user-select: none;
+  pointer-events: none;
+}

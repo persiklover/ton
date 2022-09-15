@@ -1,0 +1,49 @@
+$fonts: "../public/fonts/";
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish Regular'),
+    local('Mulish-Regular'),
+    url($fonts + 'Mulish/Mulish-Regular.woff2') format('woff2'),
+    url($fonts + 'Mulish/Mulish-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish Medium'),
+    local('Mulish-Medium'),
+    url($fonts + 'Mulish/Mulish-Medium.woff2') format('woff2'),
+    url($fonts + 'Mulish/Mulish-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish ExtraBold'),
+    local('Mulish-ExtraBold'),
+    url($fonts + 'Mulish/Mulish-ExtraBold.woff2') format('woff2'),
+    url($fonts + 'Mulish/Mulish-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src:
+    local('Mulish Black'),
+    local('Mulish-Black'),
+    url($fonts + 'Mulish/Mulish-Black.woff2') format('woff2'),
+    url($fonts + 'Mulish/Mulish-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
